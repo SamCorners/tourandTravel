@@ -1,0 +1,8 @@
+# Netlify redirects
+https://www.sikkimtourandtravel.com/* https://sikkimtourandtravel.com/:splat 301!
+/sikkim-tour-package-from-chennai.html /packages.html 301
+/sikkim-tour-package-from-bangalore.html /packages.html 301
+/sikkim-tour-package-from-hyderabad.html /packages.html 301
+/darjeeling-tour-package-from-south-india.html /destinations/darjeeling.html 301
+/blog/how-to-reach-sikkim-from-south-india.html /blog/how-to-reach-sikkim.html 301
+/blog/south-indian-food-in-sikkim-darjeeling.html /blog/food-guide-sikkim-darjeeling.html 301

@@ -1,0 +1,29 @@
+# Apache / cPanel / Hostinger. Upload as .htaccess in public_html.
+ErrorDocument 404 /404.html
+
+RewriteEngine On
+# Force HTTPS and the non-www domain (https://sikkimtourandtravel.com)
+RewriteCond %{HTTPS} off [OR]
+RewriteCond %{HTTP_HOST} ^www\. [NC]
+RewriteRule ^(.*)$ https://sikkimtourandtravel.com/$1 [L,R=301]
+
+# Retired pages (301 permanent redirects)
+Redirect 301 /sikkim-tour-package-from-chennai.html /packages.html
+Redirect 301 /sikkim-tour-package-from-bangalore.html /packages.html
+Redirect 301 /sikkim-tour-package-from-hyderabad.html /packages.html
+Redirect 301 /darjeeling-tour-package-from-south-india.html /destinations/darjeeling.html
+Redirect 301 /blog/how-to-reach-sikkim-from-south-india.html /blog/how-to-reach-sikkim.html
+Redirect 301 /blog/south-indian-food-in-sikkim-darjeeling.html /blog/food-guide-sikkim-darjeeling.html
+
+# Caching for static assets
+<IfModule mod_expires.c>
+ ExpiresActive On
+ ExpiresByType image/webp "access plus 1 year"
+ ExpiresByType image/jpeg "access plus 1 year"
+ ExpiresByType image/svg+xml "access plus 1 year"
+ ExpiresByType text/css "access plus 1 month"
+ ExpiresByType application/javascript "access plus 1 month"
+</IfModule>
+<IfModule mod_deflate.c>
+ AddOutputFilterByType DEFLATE text/html text/css application/javascript image/svg+xml application/xml text/plain
+</IfModule>

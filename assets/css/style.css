@@ -69,8 +69,10 @@ p{margin:0 0 1em}
 .site-header__in{display:flex;align-items:center;gap:.75rem;height:var(--header-h)}
 .brand{display:flex;align-items:center;gap:.55rem;color:var(--ink);text-decoration:none;margin-right:auto;min-width:0}
 .brand__mark{width:34px;height:34px;flex:none}
-.brand__name{font:600 1.08rem/1.1 var(--serif);white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.brand__name small{display:block;font:500 .72rem/1.3 var(--sans);color:var(--muted);letter-spacing:.02em}
+.brand__name{font:600 1rem/1.1 var(--serif)}
+.brand__name small{display:none}
+@media (min-width:420px){.brand__name{font-size:1.08rem;white-space:nowrap}.brand__name small{display:block}}
+.brand__name small{font:500 .72rem/1.3 var(--sans);color:var(--muted);letter-spacing:.02em}
 .nav-toggle{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;background:none;border:1px solid var(--line);border-radius:var(--radius);color:var(--ink);cursor:pointer}
 .site-nav{display:none}
 .site-nav.is-open{display:block;position:absolute;left:0;right:0;top:var(--header-h);background:var(--surface);border-bottom:1px solid var(--line);box-shadow:var(--shadow-lg);max-height:calc(100vh - var(--header-h) - 64px);overflow:auto}

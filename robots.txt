@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: {{DOMAIN}}/sitemap.xml
+Sitemap: https://sikkimtourandtravel.com/sitemap.xml
